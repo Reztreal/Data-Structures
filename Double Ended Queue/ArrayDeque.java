@@ -164,13 +164,13 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
         if (this == o) return true;
         if (o == null || o.getClass() != this.getClass()) return false;
 
-        ArrayDeque<?> otherDq = (ArrayDeque<?>) o;  // Cast after type check
+        ArrayDeque<?> otherDq = (ArrayDeque<?>) o;
         if (otherDq.size() != this.size()) {
             return false;
         }
 
         for (int i = 0; i < items.length; i++) {
-            if (!otherDq.getCircular(i).equals(this.getCircular(i))) {  // Use equals for object comparison
+            if (!otherDq.getCircular(i).equals(this.getCircular(i))) {
                 return false;
             }
         }
